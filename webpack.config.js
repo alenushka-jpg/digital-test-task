@@ -79,7 +79,7 @@ module.exports = {
         generator: {
           filename: 'fonts/[hash][ext][query]'
         }
-      },    
+      },
     ],
   },
   optimization: {
