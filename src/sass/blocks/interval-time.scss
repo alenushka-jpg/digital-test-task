@@ -1,0 +1,136 @@
+
+.interval-time {
+  padding-top: 96px;
+}
+
+.interval-time__circle {
+  width: 536px;
+  height: 530px;
+  border-radius: 50%;
+  border: 1px solid $nordic-breeze;
+}
+
+.interval-time__circle {
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+.interval-time__point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.interval-time__point:nth-child(1) .interval-time__circle-button {
+  transform: rotate(0deg) translate(265px) rotate(0deg);
+}
+
+.interval-time__point:nth-child(2) .interval-time__circle-button {
+  transform: rotate(60deg) translate(265px) rotate(-60deg);
+}
+
+.interval-time__point:nth-child(3) .interval-time__circle-button {
+  transform: rotate(120deg) translate(265px) rotate(-120deg);
+}
+
+.interval-time__point:nth-child(4) .interval-time__circle-button {
+  transform: rotate(180deg) translate(265px) rotate(-180deg);
+}
+
+.interval-time__point:nth-child(5) .interval-time__circle-button {
+  transform: rotate(240deg) translate(265px) rotate(-240deg);
+}
+
+.interval-time__point:nth-child(6) .interval-time__circle-button {
+  transform: rotate(300deg) translate(265px) rotate(-300deg);
+}
+
+
+.interval-time__period {
+  display: flex;
+  column-gap: 92px;
+  margin-left: 138px;
+  margin-right: auto;
+}
+
+.interval-time__year {
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 160px;
+  letter-spacing: -4px;
+
+  &--start {
+    color: $azure;
+  }
+
+  &--end {
+    color: $rose;
+  }
+}
+
+.interval-time__name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $deep-ocean;
+}
+
+.interval-time__circle-button {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: $deep-ocean;
+
+  span {
+    display: none;
+  }
+
+  &--active {
+    width: 56px;
+    height: 56px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    border: 1px solid $slate-shade;
+    color: $deep-ocean;
+    background-color: $white-smoke;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+.interval-time__name {
+  display: none;
+}
+
+.interval-time__circle-button--active + .interval-time__name {
+  display: block;
+}
+
+.interval-time__counter {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: $deep-ocean;
+}
+
+.interval-time__nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid $cold-steel;
+
+  &--next img {
+    transform: rotateY(180deg);
+  }
+}

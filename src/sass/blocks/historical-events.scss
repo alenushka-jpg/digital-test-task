@@ -1,12 +1,29 @@
 .historical-events {
+  padding-left: 160px;
+}
+
+.historical-events__container {
   padding-top: 170px;
   padding-bottom: 104px;
+  border-left: 1px solid $dawn-grey;
+  border-right: 1px solid $dawn-grey;
 }
 
 .historical-events__title {
+  position: relative;
   margin: 0;
   max-width: 430px;
   font-size: 56px;
   font-weight: 700;
   line-height: 120%;
+
+  &:before {
+    position: absolute;
+    top: 7px;
+    left: -81px;
+    content: '';
+    width: 6px;
+    height: 120px;
+    background: linear-gradient(to bottom, $summer-sky 0%, $rose 100%);
+  }
 }
