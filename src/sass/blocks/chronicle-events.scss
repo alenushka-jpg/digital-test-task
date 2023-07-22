@@ -1,3 +1,32 @@
+.chronicle-events {
+  position: relative;
+  display: none;
+  flex-wrap: wrap;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.chronicle-events__list {
+  position: relative;
+  display: flex;
+  column-gap: 80px;
+  width: 2920px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 20;
+}
+
+.chronicle-events__item {
+  width: 320px;
+}
+
+.chronicle-events__item:nth-of-type(2) {
+  width: 400px;
+}
+
 .chronicle-events__year {
   color: $summer-sky;
   font-family: $secondary-font;
@@ -11,4 +40,37 @@
   color: $deep-ocean;
   font-size: 20px;
   line-height: 30px;
+}
+
+.chronicle-events__event {
+  max-width: 1280px;
+  overflow: hidden;
+}
+
+.chronicle-events__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: $basic-white;
+  filter: drop-shadow(0px 0px 15px rgba(56, 119, 238, 0.10));
+
+  &--prev img {
+    transform: rotate(-180deg);
+  }
+
+  &--prev {
+    left: -60px;
+    top: 41px;
+  }
+
+  &--next {
+    right: -42px;
+    top: 41px;
+  }
 }
