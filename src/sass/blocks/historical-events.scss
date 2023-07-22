@@ -1,5 +1,9 @@
 .historical-events {
   padding-left: 160px;
+
+  @media (max-width: 1600px) {
+    padding-left: 0;
+  }
 }
 
 .historical-events__container {

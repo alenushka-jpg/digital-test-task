@@ -17,6 +17,10 @@
   padding: 0;
   list-style: none;
   z-index: 20;
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    column-gap: 30px;
+  }
 }
 
 .chronicle-events__item {

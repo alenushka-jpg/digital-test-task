@@ -1,7 +1,10 @@
 
 .interval-time {
   position: relative;
-  padding-top: 84px;
+  padding-top: 0;
+  width: 1245px;
+  height: 530px;
+  margin: -87px auto 96px;
 
   &::before,
   &::after {
@@ -11,7 +14,7 @@
   }
 
   &::before {
-    top: -304px;
+    top: -212px;
     left: 50%;
     width: 1px;
     height: 1080px;
@@ -19,20 +22,40 @@
   }
 
   &::after {
-    top: 38%;
-    left: -80px;
-    width: 1440px;
+    top: 50%;
+    left: -97px;
+    width: 1450px;
     height: 1px;
+  }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    width: 1092px;
+    margin-top: -59px;
+
+    &::before {
+      left: 51%;
+    }
+
+    &::after {
+      top: 45%;
+    }
   }
 }
 
 .interval-time__period {
   position: relative;
+  top: 210px;
+  left: 2%;
   display: flex;
   column-gap: 92px;
-  margin-left: 138px;
-  margin-right: auto;
+  transform: rotate(90deg) translate(-50%);
   z-index: 5;
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    top: 195px;
+    left: 0;
+    column-gap: 81px;
+  }
 }
 
 .interval-time__year {
@@ -48,18 +71,29 @@
   &--end {
     color: $rose;
   }
+
+  @media (max-width: 1439px) {
+    font-size: 170px;
+    line-height: 130px;
+  }
 }
 
 .interval-time__circle {
   position: absolute;
   width: 531px;
   height: 530px;
-  top: -87px;
+  top: 0;
   left: 50%;
   transform: rotate(-90deg) translateY(-50%);
   border-radius: 50%;
   border: 1px solid $nordic-breeze;
   z-index: 1;
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    left: 51%;
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .interval-time__point {
@@ -120,14 +154,27 @@
   span {
     transform: rotate(3deg);
   }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(86deg) translate(258px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button1+ .interval-time__name  {
-  transform: rotate(90deg) translate(331px) rotate(0deg)
+  transform: rotate(90deg) translate(331px) rotate(0deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(90deg) translate(290px) rotate(0deg);
+  }
+
 }
 
 #circle-button1 {
   transform: rotate(90deg) translate(260px);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(93.6deg) translate(220px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button2 {
@@ -136,14 +183,26 @@
   span {
     transform: rotate(-52deg);
   }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(140deg) translate(251px) rotate(0);
+  }
 }
 
 .interval-time__circle-button--active#circle-button2 + .interval-time__name  {
   transform: rotate(142deg) translate(288px) rotate(-52deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(136deg) translate(260px) rotate(-45deg);
+  }
 }
 
 #circle-button2 {
   transform: rotate(150.4deg) translate(262px);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(150.4deg) translate(223px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button3 {
@@ -152,30 +211,62 @@
   span {
     transform: rotate(-114deg);
   }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(213deg) translate(195px);
+
+    span {
+      transform: rotate(-112deg);
+    }
+  }
 }
 
 .interval-time__circle-button--active#circle-button3 + .interval-time__name  {
   transform: rotate(198deg) translate(242px) rotate(-107deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(199deg) translate(204px) rotate(-108deg);
+  }
 }
 
 #circle-button3 {
   transform: rotate(213deg) translate(268px);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(213deg) translate(227px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button4 {
   transform: rotate(269.7deg) translate(233px);
 
   span {
-    transform: rotate(179deg);
+    transform: rotate(213deg) rotate(179deg);
+  }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(267.7deg) translate(194px);
+
+    span {
+      transform: rotate(213deg) rotate(-29deg);
+    }
   }
 }
 
 .interval-time__circle-button--active#circle-button4 + .interval-time__name  {
   transform: rotate(269.7deg) translate(208px) rotate(180deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(269.7deg) translate(187px) rotate(180deg);
+  }
 }
 
 #circle-button4 {
   transform: rotate(270deg) translate(270px);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(266.5deg) translate(229px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button5 {
@@ -184,14 +275,26 @@
   span {
     transform: rotate(112deg);
   }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(337deg) translate(214px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button5 + .interval-time__name  {
   transform: rotate(340deg) translate(252px) rotate(109deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(339deg) translate(255px) rotate(109deg);
+  }
 }
 
 #circle-button5 {
   transform: rotate(329.6deg) translate(267px);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(329.6deg) translate(226px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button6 {
@@ -200,10 +303,18 @@
   span {
     transform: rotate(60deg);
   }
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(30.5deg) translate(237px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button6 + .interval-time__name  {
   transform: rotate(33deg) translate(283px) rotate(56deg);
+
+  @media (max-width: 1439px) and (min-width: $laptop-width) {
+    transform: rotate(33deg) translate(253px) rotate(57deg);
+  }
 }
 
 #circle-button6 {
@@ -211,8 +322,10 @@
 }
 
 .interval-time__navigation {
-  padding-top: 145px;
-  margin-bottom: 55px;
+  position: absolute;
+  left: -54px;
+  top: -69%;
+  transform: rotate(90deg);
 }
 
 .interval-time__counter {
