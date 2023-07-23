@@ -14,21 +14,26 @@
   border-right: 1px solid $dawn-grey;
   overflow: hidden;
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     padding-top: 164px;
     padding-left: 75px;
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     padding-top: 158px;
     padding-left: 45px;
     padding-right: 45px;
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     padding-top: 140px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 568px;
+    padding: 58px 20px 15px;
   }
 }
 
@@ -50,29 +55,38 @@
     background: linear-gradient(to bottom, $summer-sky 0%, $rose 100%);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     &:before {
       left: -75px;
     }
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     font-size: 46px;
     max-width: 371px;
 
     &:before {
-      left: -41px;
+      left: -46px;
       top: 0px;
     }
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     font-size: 40px;
     max-width: 336px;
 
     &:before {
       left: -41px;
       top: -10px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    max-width: 167px;
+
+    &:before {
+      display: none;
     }
   }
 }

@@ -7,21 +7,37 @@
   width: auto;
   height: 572px;
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     width: auto;
     height: 543px;
     margin-top: -51px;
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     width: auto;
     margin-top: -10px;
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     margin-top: 34px;
     margin-bottom: 41px;
     height: 523px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: auto;
+    margin-top: 45px;
+    margin-bottom: 64px;
+    flex-direction: column;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -54px;
+      width: 580px;
+      height: 1px;
+      background-color: $gentle-azure;
+    }
   }
 }
 
@@ -34,22 +50,28 @@
   transform: rotate(90deg) translate(-50%);
   z-index: 5;
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     top: 187px;
     left: 0;
     column-gap: 81px;
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     left: 11px;
-    top: 260px;
-    column-gap: 81px;
+    column-gap: 26px;
+    top: 277px;
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     left: 7px;
-    top: 236px;
-    column-gap: 67px;
+    top: 238px;
+    column-gap: 33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    transform: none;
+    column-gap: 25px;
   }
 }
 
@@ -67,19 +89,24 @@
     color: $rose;
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     font-size: 170px;
     line-height: 130px;
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     font-size: 145px;
     line-height: 110px;
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     font-size: 120px;
     line-height: 90px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 56px;
+    letter-spacing: -1.12px;
   }
 }
 
@@ -116,7 +143,7 @@
     height: 1px;
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     left: 52%;
     width: 446px;
     height: 450px;
@@ -133,7 +160,7 @@
     }
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     left: 50%;
 
     &::before {
@@ -145,12 +172,26 @@
     }
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     width: 380px;
     height: 380px;
 
     &::after {
       left: -121%;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    width: auto;
+    height: auto;
+    border: none;
+    transform: none;
+
+    &::before,
+    &::after,
+    .interval-time__breakpoints {
+      display: none;
     }
   }
 }
@@ -214,7 +255,7 @@
     transform: rotate(3deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(86deg) translate(258px);
   }
 }
@@ -222,7 +263,7 @@
 .interval-time__circle-button--active#circle-button1+ .interval-time__name  {
   transform: rotate(90deg) translate(331px) rotate(0deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(90deg) translate(290px) rotate(0deg);
   }
 }
@@ -230,15 +271,15 @@
 #circle-button1 {
   transform: rotate(90deg) translate(260px);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(94.6deg) translate(220px);
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(90deg) translate(220px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(90deg) translate(185px);
   }
 
@@ -251,7 +292,7 @@
     transform: rotate(-52deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(140deg) translate(251px) rotate(0);
   }
 }
@@ -259,7 +300,7 @@
 .interval-time__circle-button--active#circle-button2 + .interval-time__name  {
   transform: rotate(142deg) translate(288px) rotate(-52deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(136deg) translate(260px) rotate(-45deg);
   }
 }
@@ -267,15 +308,15 @@
 #circle-button2 {
   transform: rotate(150.4deg) translate(262px);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(151.4deg) translate(220px);
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(150deg) translate(220px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(151deg) translate(187px);
   }
 }
@@ -287,7 +328,7 @@
     transform: rotate(-114deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(213deg) translate(195px);
 
     span {
@@ -299,7 +340,7 @@
 .interval-time__circle-button--active#circle-button3 + .interval-time__name  {
   transform: rotate(198deg) translate(242px) rotate(-107deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(199deg) translate(204px) rotate(-108deg);
   }
 }
@@ -307,11 +348,11 @@
 #circle-button3 {
   transform: rotate(213deg) translate(268px);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(213deg) translate(226px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(213deg) translate(192px);
   }
 }
@@ -323,7 +364,7 @@
     transform: rotate(213deg) rotate(179deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(267.7deg) translate(194px);
 
     span {
@@ -335,7 +376,7 @@
 .interval-time__circle-button--active#circle-button4 + .interval-time__name  {
   transform: rotate(269.7deg) translate(208px) rotate(180deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(269.7deg) translate(187px) rotate(180deg);
   }
 }
@@ -343,15 +384,15 @@
 #circle-button4 {
   transform: rotate(270deg) translate(270px);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(265.5deg) translate(229px);
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(270deg) translate(229px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(270deg) translate(194px);
   }
 }
@@ -363,7 +404,7 @@
     transform: rotate(112deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(337deg) translate(214px);
   }
 }
@@ -371,7 +412,7 @@
 .interval-time__circle-button--active#circle-button5 + .interval-time__name  {
   transform: rotate(340deg) translate(252px) rotate(109deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(339deg) translate(255px) rotate(109deg);
   }
 }
@@ -379,15 +420,15 @@
 #circle-button5 {
   transform: rotate(329.6deg) translate(267px);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(329.6deg) translate(226px);
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(330.6deg) translate(225px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(329deg) translate(192px);
   }
 }
@@ -399,7 +440,7 @@
     transform: rotate(60deg);
   }
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(45.5deg) translate(242px);
 
     span {
@@ -407,11 +448,11 @@
     }
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(43deg) translate(242px);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(43deg) translate(214px);
   }
 }
@@ -419,15 +460,15 @@
 .interval-time__circle-button--active#circle-button6 + .interval-time__name  {
   transform: rotate(33deg) translate(283px) rotate(56deg);
 
-  @media (max-width: 1439px) {
+  @media (max-width: $desktop-width) {
     transform: rotate(47deg) translate(248px) rotate(43deg);
   }
 
-  @media (max-width: 1249px) {
+  @media (max-width: $laptop-width) {
     transform: rotate(45deg) translate(248px) rotate(45deg);
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: $tablet-width) {
     transform: rotate(44deg) translate(216px) rotate(45deg);
   }
 }
@@ -436,11 +477,16 @@
   transform: rotate(24deg) translate(263px);
 }
 
-
 .interval-time__navigation {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    bottom: -314px;
+    left: 0;
+  }
 }
 
 .interval-time__counter {
@@ -450,12 +496,19 @@
   font-size: 14px;
   font-weight: 400;
   color: $deep-ocean;
-}
 
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2px;
+  }
+}
 
 .interval-time__nav-buttons {
   display: flex;
   column-gap: 20px;
+
+  @media (max-width: $mobile-width) {
+    column-gap: 6px;
+  }
 }
 
 .interval-time__nav-button {
@@ -471,5 +524,15 @@
 
   &--next img {
     transform: rotateY(180deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 25px;
+    height: 25px;
+
+    img {
+      width: 4px;
+      height: 7px;
+    }
   }
 }
