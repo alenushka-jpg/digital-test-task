@@ -13,6 +13,23 @@
   border-left: 1px solid $dawn-grey;
   border-right: 1px solid $dawn-grey;
   overflow: hidden;
+
+  @media (max-width: 1439px) {
+    padding-top: 164px;
+    padding-left: 75px;
+  }
+
+  @media (max-width: 1249px) {
+    padding-top: 158px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: 738px) {
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .historical-events__title {
@@ -31,5 +48,31 @@
     width: 6px;
     height: 120px;
     background: linear-gradient(to bottom, $summer-sky 0%, $rose 100%);
+  }
+
+  @media (max-width: 1439px) {
+    &:before {
+      left: -75px;
+    }
+  }
+
+  @media (max-width: 1249px) {
+    font-size: 46px;
+    max-width: 371px;
+
+    &:before {
+      left: -41px;
+      top: 0px;
+    }
+  }
+
+  @media (max-width: 738px) {
+    font-size: 40px;
+    max-width: 336px;
+
+    &:before {
+      left: -41px;
+      top: -10px;
+    }
   }
 }

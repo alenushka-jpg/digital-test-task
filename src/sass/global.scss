@@ -47,6 +47,8 @@ img {
 
   @media (max-width: $tablet-width) {
     max-width: $tablet-width;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (max-width: $mobile-width) {

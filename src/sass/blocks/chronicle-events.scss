@@ -18,17 +18,29 @@
   list-style: none;
   z-index: 20;
 
-  @media (max-width: 1439px) and (min-width: $laptop-width) {
-    column-gap: 30px;
+  @media (max-width: 1439px){
+    column-gap: 33px;
+  }
+
+  @media (max-width: 738px) {
+    column-gap: 15px;
   }
 }
 
 .chronicle-events__item {
   width: 320px;
+
+  @media (max-width: 738px) {
+    width: 280px;
+  }
 }
 
 .chronicle-events__item:nth-of-type(2) {
-  width: 400px;
+
+
+  @media (max-width: 738px) {
+    width: 360px;
+  }
 }
 
 .chronicle-events__year {
@@ -44,6 +56,10 @@
   color: $deep-ocean;
   font-size: 20px;
   line-height: 30px;
+
+  @media (max-width: 738px) {
+    font-size: 18px;
+  }
 }
 
 .chronicle-events__event {
@@ -74,7 +90,17 @@
   }
 
   &--next {
-    right: -42px;
+    right: -56px;
     top: 41px;
+  }
+
+  @media (max-width: 1249px) {
+    &--prev {
+      left: -46px;
+    }
+  }
+
+  @media (max-width: 899px) {
+    display: none;
   }
 }
