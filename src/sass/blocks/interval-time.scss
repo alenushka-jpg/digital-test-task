@@ -1,38 +1,78 @@
 
 .interval-time {
   position: relative;
-  padding-top: 84px;
+  display: flex;
+  padding-top: 0;
+  margin: -87px auto 55px;
+  width: auto;
+  height: 572px;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    background-color: $dawn-grey;
+  @media (max-width: $desktop-width) {
+    width: auto;
+    height: 543px;
+    margin-top: -51px;
   }
 
-  &::before {
-    top: -304px;
-    left: 50%;
-    width: 1px;
-    height: 1080px;
-    transform: translate(-50%);
+  @media (max-width: $laptop-width) {
+    width: auto;
+    margin-top: -10px;
   }
 
-  &::after {
-    top: 38%;
-    left: -80px;
-    width: 1440px;
-    height: 1px;
+  @media (max-width: $tablet-width) {
+    margin-top: 34px;
+    margin-bottom: 41px;
+    height: 523px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: auto;
+    margin-top: 45px;
+    margin-bottom: 64px;
+    flex-direction: column;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -54px;
+      width: 580px;
+      height: 1px;
+      background-color: $gentle-azure;
+    }
   }
 }
 
 .interval-time__period {
   position: relative;
+  top: 210px;
+  left: 2%;
   display: flex;
   column-gap: 92px;
-  margin-left: 138px;
-  margin-right: auto;
+  transform: rotate(90deg) translate(-50%);
   z-index: 5;
+
+  @media (max-width: $desktop-width) {
+    top: 187px;
+    left: 0;
+    column-gap: 81px;
+  }
+
+  @media (max-width: $laptop-width) {
+    left: 11px;
+    column-gap: 26px;
+    top: 277px;
+  }
+
+  @media (max-width: $tablet-width) {
+    left: 7px;
+    top: 238px;
+    column-gap: 33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    transform: none;
+    column-gap: 25px;
+  }
 }
 
 .interval-time__year {
@@ -48,18 +88,112 @@
   &--end {
     color: $rose;
   }
+
+  @media (max-width: $desktop-width) {
+    font-size: 170px;
+    line-height: 130px;
+  }
+
+  @media (max-width: $laptop-width) {
+    font-size: 145px;
+    line-height: 110px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 120px;
+    line-height: 90px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 56px;
+    letter-spacing: -1.12px;
+  }
 }
 
 .interval-time__circle {
   position: absolute;
   width: 531px;
   height: 530px;
-  top: -87px;
+  top: 0;
   left: 50%;
   transform: rotate(-90deg) translateY(-50%);
   border-radius: 50%;
   border: 1px solid $nordic-breeze;
   z-index: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $dawn-grey;
+  }
+
+  &::before {
+    top: -87%;
+    left: 50%;
+    width: 1px;
+    height: 1440px;
+    transform: translate(-50%);
+  }
+
+  &::after {
+    top: 50%;
+    left: -73%;
+    width: 1450px;
+    height: 1px;
+  }
+
+  @media (max-width: $desktop-width) {
+    left: 52%;
+    width: 446px;
+    height: 450px;
+
+    &::before {
+      left: 46%;
+      top: -120%;
+      height: 1940px;
+    }
+
+    &::after {
+      top: 49%;
+      left: -100%;
+    }
+  }
+
+  @media (max-width: $laptop-width) {
+    left: 50%;
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      top: 50%;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 380px;
+    height: 380px;
+
+    &::after {
+      left: -121%;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    position: static;
+    width: auto;
+    height: auto;
+    border: none;
+    transform: none;
+
+    &::before,
+    &::after,
+    .interval-time__breakpoints {
+      display: none;
+    }
+  }
 }
 
 .interval-time__point {
@@ -120,14 +254,35 @@
   span {
     transform: rotate(3deg);
   }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(86deg) translate(258px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button1+ .interval-time__name  {
-  transform: rotate(90deg) translate(331px) rotate(0deg)
+  transform: rotate(90deg) translate(331px) rotate(0deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(90deg) translate(290px) rotate(0deg);
+  }
 }
 
 #circle-button1 {
   transform: rotate(90deg) translate(260px);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(94.6deg) translate(220px);
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(90deg) translate(220px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(90deg) translate(185px);
+  }
+
 }
 
 .interval-time__circle-button--active#circle-button2 {
@@ -136,14 +291,34 @@
   span {
     transform: rotate(-52deg);
   }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(140deg) translate(251px) rotate(0);
+  }
 }
 
 .interval-time__circle-button--active#circle-button2 + .interval-time__name  {
   transform: rotate(142deg) translate(288px) rotate(-52deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(136deg) translate(260px) rotate(-45deg);
+  }
 }
 
 #circle-button2 {
   transform: rotate(150.4deg) translate(262px);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(151.4deg) translate(220px);
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(150deg) translate(220px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(151deg) translate(187px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button3 {
@@ -152,30 +327,74 @@
   span {
     transform: rotate(-114deg);
   }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(213deg) translate(195px);
+
+    span {
+      transform: rotate(-112deg);
+    }
+  }
 }
 
 .interval-time__circle-button--active#circle-button3 + .interval-time__name  {
   transform: rotate(198deg) translate(242px) rotate(-107deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(199deg) translate(204px) rotate(-108deg);
+  }
 }
 
 #circle-button3 {
   transform: rotate(213deg) translate(268px);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(213deg) translate(226px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(213deg) translate(192px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button4 {
   transform: rotate(269.7deg) translate(233px);
 
   span {
-    transform: rotate(179deg);
+    transform: rotate(213deg) rotate(179deg);
+  }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(267.7deg) translate(194px);
+
+    span {
+      transform: rotate(213deg) rotate(-29deg);
+    }
   }
 }
 
 .interval-time__circle-button--active#circle-button4 + .interval-time__name  {
   transform: rotate(269.7deg) translate(208px) rotate(180deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(269.7deg) translate(187px) rotate(180deg);
+  }
 }
 
 #circle-button4 {
   transform: rotate(270deg) translate(270px);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(265.5deg) translate(229px);
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(270deg) translate(229px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(270deg) translate(194px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button5 {
@@ -184,14 +403,34 @@
   span {
     transform: rotate(112deg);
   }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(337deg) translate(214px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button5 + .interval-time__name  {
   transform: rotate(340deg) translate(252px) rotate(109deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(339deg) translate(255px) rotate(109deg);
+  }
 }
 
 #circle-button5 {
   transform: rotate(329.6deg) translate(267px);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(329.6deg) translate(226px);
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(330.6deg) translate(225px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(329deg) translate(192px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button6 {
@@ -200,10 +439,38 @@
   span {
     transform: rotate(60deg);
   }
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(45.5deg) translate(242px);
+
+    span {
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(43deg) translate(242px);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(43deg) translate(214px);
+  }
 }
 
 .interval-time__circle-button--active#circle-button6 + .interval-time__name  {
   transform: rotate(33deg) translate(283px) rotate(56deg);
+
+  @media (max-width: $desktop-width) {
+    transform: rotate(47deg) translate(248px) rotate(43deg);
+  }
+
+  @media (max-width: $laptop-width) {
+    transform: rotate(45deg) translate(248px) rotate(45deg);
+  }
+
+  @media (max-width: $tablet-width) {
+    transform: rotate(44deg) translate(216px) rotate(45deg);
+  }
 }
 
 #circle-button6 {
@@ -211,8 +478,15 @@
 }
 
 .interval-time__navigation {
-  padding-top: 145px;
-  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    bottom: -314px;
+    left: 0;
+  }
 }
 
 .interval-time__counter {
@@ -222,12 +496,19 @@
   font-size: 14px;
   font-weight: 400;
   color: $deep-ocean;
-}
 
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2px;
+  }
+}
 
 .interval-time__nav-buttons {
   display: flex;
   column-gap: 20px;
+
+  @media (max-width: $mobile-width) {
+    column-gap: 6px;
+  }
 }
 
 .interval-time__nav-button {
@@ -243,5 +524,15 @@
 
   &--next img {
     transform: rotateY(180deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 25px;
+    height: 25px;
+
+    img {
+      width: 4px;
+      height: 7px;
+    }
   }
 }
