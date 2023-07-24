@@ -82,6 +82,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
   optimization: {
     minimizer: [
       new ImageMinimizerPlugin({

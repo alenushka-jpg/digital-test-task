@@ -391,6 +391,7 @@
   }
 }
 
+
 .interval-time__circle-button--active#circle-button4 + .interval-time__name  {
   transform: rotate(269.7deg) translate(208px) rotate(180deg);
 
@@ -540,6 +541,7 @@
   border-radius: 50%;
   border: 1px solid $cold-steel;
   background-color: inherit;
+  cursor: pointer;
 
   &--next img {
     transform: rotateY(180deg);

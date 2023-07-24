@@ -1,24 +1,24 @@
 // Определение интерфейсов
-interface TimePeriod {
+export interface TimePeriod {
   start: number;
   end: number;
   id: string;
 }
 
 // интерфейс определяет форму объектов исторического события
-interface HistoricalEvent {
+export interface HistoricalEvent {
   eventYear: number;
   eventDescription: string;
 }
 
 // интерфейс определяет структуру объекта, который представляет собой исторический период,
 // включая временной период и массив исторических событий, связанных с этим периодом
-interface HistoricalPeriod {
+export interface HistoricalPeriod {
   period: TimePeriod;
   events: HistoricalEvent[];
 }
 
-let historicalPeriods: HistoricalPeriod[] = [
+export let historicalPeriods: HistoricalPeriod[] = [
   {
     period:  {start: 1980, end: 1986, id: 'circle-button1'},
     events: [
@@ -84,26 +84,16 @@ let historicalPeriods: HistoricalPeriod[] = [
 ];
 
 // класс реализует интерфейс HistoricalEvent
-class HistoricalEventClass implements HistoricalEvent {
+export class HistoricalEventClass implements HistoricalEvent {
   constructor(
     public eventYear: number,
     public eventDescription: string
   ) {}
 }
 
-class HistoricalPeriodClass implements HistoricalPeriod {
+export class HistoricalPeriodClass implements HistoricalPeriod {
   constructor(
     public period: TimePeriod,
     public events: HistoricalEvent[]
   ) {}
-}
-
-function getEventsForPeriod(id: string): HistoricalEvent[] {
-  for (let period of historicalPeriods) {
-    if (period.period.id === id) {
-      return period.events;
-    }
-  }
-  // Вернуть пустой массив, если не найдено совпадение
-  return [];
 }
