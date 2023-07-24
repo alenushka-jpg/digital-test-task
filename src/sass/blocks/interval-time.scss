@@ -2,6 +2,7 @@
 .interval-time {
   position: relative;
   display: flex;
+  flex-direction: column;
   padding-top: 0;
   margin: -87px auto 55px;
   width: auto;
@@ -48,7 +49,7 @@
   display: flex;
   column-gap: 92px;
   transform: rotate(90deg) translate(-50%);
-  z-index: 5;
+  z-index: -1;
 
   @media (max-width: $desktop-width) {
     top: 187px;
@@ -134,6 +135,7 @@
     width: 1px;
     height: 1440px;
     transform: translate(-50%);
+    z-index: -5;
   }
 
   &::after {
@@ -215,13 +217,26 @@
 
 .interval-time__circle-button {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  width: 6px;
-  height: 6px;
+  width: 13px;
+  height: 13px;
   border: none;
-  border-radius: 50%;
-  background-color: $deep-ocean;
   z-index: 10;
+  border-radius: 50%;
+  background-color: inherit;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $deep-ocean;
+  }
 
   span {
     display: none;
@@ -237,6 +252,10 @@
     border: 1px solid $slate-shade;
     color: $deep-ocean;
     background-color: $white-smoke;
+
+    &::before {
+      display: none;
+    }
 
     span {
       display: block;
@@ -269,20 +288,19 @@
 }
 
 #circle-button1 {
-  transform: rotate(90deg) translate(260px);
+  transform: rotate(90deg) translate(264px );
 
   @media (max-width: $desktop-width) {
-    transform: rotate(94.6deg) translate(220px);
+    transform: rotate(94.6deg) translate(224px);
   }
 
   @media (max-width: $laptop-width) {
-    transform: rotate(90deg) translate(220px);
+    transform: rotate(90deg) translate(224px);
   }
 
   @media (max-width: $tablet-width) {
-    transform: rotate(90deg) translate(185px);
+    transform: rotate(90deg) translate(189px);
   }
-
 }
 
 .interval-time__circle-button--active#circle-button2 {
@@ -306,18 +324,18 @@
 }
 
 #circle-button2 {
-  transform: rotate(150.4deg) translate(262px);
+  transform: rotate(150.4deg) translate(265px);
 
   @media (max-width: $desktop-width) {
-    transform: rotate(151.4deg) translate(220px);
+    transform: rotate(151.4deg) translate(223px);
   }
 
   @media (max-width: $laptop-width) {
-    transform: rotate(150deg) translate(220px);
+    transform: rotate(150deg) translate(223px);
   }
 
   @media (max-width: $tablet-width) {
-    transform: rotate(151deg) translate(187px);
+    transform: rotate(151deg) translate(190px);
   }
 }
 
@@ -346,14 +364,14 @@
 }
 
 #circle-button3 {
-  transform: rotate(213deg) translate(268px);
+  transform: rotate(213deg) translate(265px);
 
   @media (max-width: $desktop-width) {
-    transform: rotate(213deg) translate(226px);
+    transform: rotate(213deg) translate(224px);
   }
 
   @media (max-width: $tablet-width) {
-    transform: rotate(213deg) translate(192px);
+    transform: rotate(213deg) translate(190px);
   }
 }
 
@@ -382,18 +400,18 @@
 }
 
 #circle-button4 {
-  transform: rotate(270deg) translate(270px);
+  transform: rotate(270deg) translate(265px);
 
   @media (max-width: $desktop-width) {
-    transform: rotate(265.5deg) translate(229px);
+    transform: rotate(265.5deg) translate(225px);
   }
 
   @media (max-width: $laptop-width) {
-    transform: rotate(270deg) translate(229px);
+    transform: rotate(270deg) translate(225px);
   }
 
   @media (max-width: $tablet-width) {
-    transform: rotate(270deg) translate(194px);
+    transform: rotate(270deg) translate(190px);
   }
 }
 
@@ -418,18 +436,18 @@
 }
 
 #circle-button5 {
-  transform: rotate(329.6deg) translate(267px);
+  transform: rotate(329.6deg) translate(265px);
 
   @media (max-width: $desktop-width) {
-    transform: rotate(329.6deg) translate(226px);
+    transform: rotate(329.6deg) translate(223px);
   }
 
   @media (max-width: $laptop-width) {
-    transform: rotate(330.6deg) translate(225px);
+    transform: rotate(330.6deg) translate(223px);
   }
 
   @media (max-width: $tablet-width) {
-    transform: rotate(329deg) translate(192px);
+    transform: rotate(329deg) translate(189px);
   }
 }
 
@@ -481,6 +499,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-end;
+  align-self: start;
 
   @media (max-width: $mobile-width) {
     position: absolute;

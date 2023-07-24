@@ -43,6 +43,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "portfinder": "^1.0.32"
+    "portfinder": "^1.0.32",
+    "swiper": "^10.0.4"
   }
 }
